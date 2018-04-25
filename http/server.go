@@ -296,7 +296,7 @@ func (hc *httpConn) constructReq() (req *Request, err error) {
 	if !ok{
 		return nil,&HttpError{"WrongRequsetScheme",reqline}
 	}
-	if req.Method !=MethodGet && req.Method !=MethodPost{
+	if req.Method !=MethodGet && req.Method !=MethodPost && req.Method !=MethodPut && req.Method !=MethodPatch{
 		return nil,&HttpError{"WrongMethod",req.Method}
 	}
 	if req.Proto != HTTPVersion{

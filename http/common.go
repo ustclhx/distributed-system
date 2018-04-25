@@ -11,6 +11,8 @@ import (
 const (
 	MethodGet  = "GET"
 	MethodPost = "POST"
+	MethodPut  = "PUT"
+	MethodPatch ="PATCH"
 )
 
 // HTTP literal constants.
